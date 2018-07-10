@@ -1,0 +1,17 @@
+/Users/totipu/Repos/TotipuTeamsApp/LocationService/test/StatlerWaldorfCorp.LocationService.Tests/bin/Debug/netcoreapp2.1/xunit.runner.visualstudio.dotnetcore.testadapter.dll
+/Users/totipu/Repos/TotipuTeamsApp/LocationService/test/StatlerWaldorfCorp.LocationService.Tests/bin/Debug/netcoreapp2.1/xunit.runner.reporters.netcoreapp10.dll
+/Users/totipu/Repos/TotipuTeamsApp/LocationService/test/StatlerWaldorfCorp.LocationService.Tests/bin/Debug/netcoreapp2.1/xunit.runner.utility.netcoreapp10.dll
+/Users/totipu/Repos/TotipuTeamsApp/LocationService/test/StatlerWaldorfCorp.LocationService.Tests/bin/Debug/netcoreapp2.1/StatlerWaldorfCorp.LocationService.Tests.deps.json
+/Users/totipu/Repos/TotipuTeamsApp/LocationService/test/StatlerWaldorfCorp.LocationService.Tests/bin/Debug/netcoreapp2.1/StatlerWaldorfCorp.LocationService.Tests.runtimeconfig.json
+/Users/totipu/Repos/TotipuTeamsApp/LocationService/test/StatlerWaldorfCorp.LocationService.Tests/bin/Debug/netcoreapp2.1/StatlerWaldorfCorp.LocationService.Tests.runtimeconfig.dev.json
+/Users/totipu/Repos/TotipuTeamsApp/LocationService/test/StatlerWaldorfCorp.LocationService.Tests/bin/Debug/netcoreapp2.1/StatlerWaldorfCorp.LocationService.Tests.dll
+/Users/totipu/Repos/TotipuTeamsApp/LocationService/test/StatlerWaldorfCorp.LocationService.Tests/bin/Debug/netcoreapp2.1/StatlerWaldorfCorp.LocationService.Tests.pdb
+/Users/totipu/Repos/TotipuTeamsApp/LocationService/test/StatlerWaldorfCorp.LocationService.Tests/bin/Debug/netcoreapp2.1/StatlerWaldorfCorp.LocationService.dll
+/Users/totipu/Repos/TotipuTeamsApp/LocationService/test/StatlerWaldorfCorp.LocationService.Tests/bin/Debug/netcoreapp2.1/StatlerWaldorfCorp.LocationService.pdb
+/Users/totipu/Repos/TotipuTeamsApp/LocationService/test/StatlerWaldorfCorp.LocationService.Tests/obj/Debug/netcoreapp2.1/StatlerWaldorfCorp.LocationService.Tests.csprojAssemblyReference.cache
+/Users/totipu/Repos/TotipuTeamsApp/LocationService/test/StatlerWaldorfCorp.LocationService.Tests/obj/Debug/netcoreapp2.1/StatlerWaldorfCorp.LocationService.Tests.csproj.CoreCompileInputs.cache
+/Users/totipu/Repos/TotipuTeamsApp/LocationService/test/StatlerWaldorfCorp.LocationService.Tests/obj/Debug/netcoreapp2.1/StatlerWaldorfCorp.LocationService.Tests.AssemblyInfoInputs.cache
+/Users/totipu/Repos/TotipuTeamsApp/LocationService/test/StatlerWaldorfCorp.LocationService.Tests/obj/Debug/netcoreapp2.1/StatlerWaldorfCorp.LocationService.Tests.AssemblyInfo.cs
+/Users/totipu/Repos/TotipuTeamsApp/LocationService/test/StatlerWaldorfCorp.LocationService.Tests/obj/Debug/netcoreapp2.1/StatlerWaldorfCorp.LocationService.Tests.csproj.CopyComplete
+/Users/totipu/Repos/TotipuTeamsApp/LocationService/test/StatlerWaldorfCorp.LocationService.Tests/obj/Debug/netcoreapp2.1/StatlerWaldorfCorp.LocationService.Tests.dll
+/Users/totipu/Repos/TotipuTeamsApp/LocationService/test/StatlerWaldorfCorp.LocationService.Tests/obj/Debug/netcoreapp2.1/StatlerWaldorfCorp.LocationService.Tests.pdb
