@@ -5,6 +5,10 @@ using Microsoft.Extensions.DependencyInjection;
 using StatlerWaldorfCorp.LocationService.Models;
 using StatlerWaldorfCorp.LocationService.Persistence;
 using Microsoft.Extensions.Logging;
+using Npgsql.EntityFrameworkCore.PostgreSQL;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Linq;
 
 namespace StatlerWaldorfCorp.LocationService {
     public class Startup
@@ -16,6 +20,8 @@ namespace StatlerWaldorfCorp.LocationService {
         public Startup(IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             var builder = new ConfigurationBuilder()
+                .SetBasePath(System.IO.Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json", optional:true)
                 .AddEnvironmentVariables()
                 .AddCommandLine(Startup.Args);               
 
@@ -28,12 +34,28 @@ namespace StatlerWaldorfCorp.LocationService {
             this.logger = this.loggerFactory.CreateLogger("Startup");
         }
 
-        public IConfigurationRoot Configuration { get; }
+        public static IConfigurationRoot Configuration { get; set; }
 
         public void ConfigureServices(IServiceCollection services)
-        {           
-            services.AddScoped<ILocationRecordRepository, InMemoryLocationRecordRepository>();
-            
+        {
+            var transient = true;
+            if (Configuration.GetSection("transient") != null) {
+                transient = Boolean.Parse(Configuration.GetSection("transient").Value);
+            }
+
+            if (transient) {
+                logger.LogInformation("Using transient location record repository.");
+                services.AddScoped<ILocationRecordRepository, InMemoryLocationRecordRepository>();
+            } else {            
+                string connectionString = Configuration.GetSection("postgres:cstr").Value;
+
+                services.AddEntityFrameworkNpgsql()
+                    .AddDbContext<LocationDbContext> (options => options.UseNpgsql(connectionString));
+
+                logger.LogInformation("Using '{0}' for DB connection string.", connectionString);
+
+                services.AddScoped<ILocationRecordRepository, LocationRecordRepository>();
+            }
             services.AddMvc();
         }
 
