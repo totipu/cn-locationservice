@@ -17,7 +17,18 @@ namespace StatlerWaldorfCorp.LocationService {
         private ILogger logger;
         private ILoggerFactory loggerFactory;
 
-        public Startup(IHostingEnvironment env, ILoggerFactory loggerFactory)
+        public Startup(IConfiguration configuration, ILoggerFactory loggerFactory)
+        {
+            Configuration = configuration;
+
+            this.loggerFactory = loggerFactory;
+            this.loggerFactory.AddConsole(LogLevel.Information);
+            this.loggerFactory.AddDebug();
+
+            this.logger = this.loggerFactory.CreateLogger("StartUp");
+        }
+
+        /*public Startup(IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             var builder = new ConfigurationBuilder()
                 .SetBasePath(System.IO.Directory.GetCurrentDirectory())
@@ -32,9 +43,9 @@ namespace StatlerWaldorfCorp.LocationService {
             this.loggerFactory.AddDebug();
 
             this.logger = this.loggerFactory.CreateLogger("Startup");
-        }
+        }*/
 
-        public static IConfigurationRoot Configuration { get; set; }
+        public static IConfiguration Configuration { get; set; }
 
         public void ConfigureServices(IServiceCollection services)
         {
