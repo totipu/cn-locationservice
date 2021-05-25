@@ -58,7 +58,14 @@ namespace StatlerWaldorfCorp.LocationService {
                 logger.LogInformation("Using transient location record repository.");
                 services.AddScoped<ILocationRecordRepository, InMemoryLocationRecordRepository>();
             } else {            
-                string connectionString = Configuration.GetSection("postgres:cstr").Value;
+                // string connectionString = Configuration.GetSection("postgres:cstr").Value;
+
+                string pgsqlServer = Environment.GetEnvironmentVariable("PGSQL_SERVER"); // "totipulocationsvcdb.postgres.database.azure.com";
+                string databaseName = Environment.GetEnvironmentVariable("PGSQL_DATABASE"); // "locationService";
+                string userId = Environment.GetEnvironmentVariable("PGSQL_USERID"); // "totipu@totipulocationsvcdb";
+                string password = Environment.GetEnvironmentVariable("PGSQL_PASSWORD"); // "industrija2!";
+
+                string connectionString = $"Host={pgsqlServer};Port=5432;Database={databaseName};Username={userId};Password={password}";
 
                 services.AddEntityFrameworkNpgsql()
                     .AddDbContext<LocationDbContext> (options => options.UseNpgsql(connectionString));
