@@ -1,11 +1,13 @@
 # Cloud Native - Location Service
 
+Location service uses PostgreSQL database.
+
 ## Environment variables
 
 |Variable name|Description|
 |---------|---------|
-|PGSQL_SERVER|PostgreSQL Server hostname|
+|PGSQL_SERVER|Server hostname|
 |PGSQL_DATABASE|Database name|
-|PGSQL_USERID|PostgreSQL Username|
+|PGSQL_USERID|Username of user with databse access|
 |PGSQL_PASSWORD|Password|
 
