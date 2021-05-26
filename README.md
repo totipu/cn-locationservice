@@ -4,6 +4,8 @@ Location service uses PostgreSQL database.
 
 ## Environment variables
 
+These variables need to be set for the service to work properly.
+
 |Variable name|Description|
 |---------|---------|
 |PGSQL_SERVER|Server hostname|
