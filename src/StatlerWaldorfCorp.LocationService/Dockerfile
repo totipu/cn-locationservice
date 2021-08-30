@@ -1,5 +1,5 @@
 # build image
-FROM microsoft/dotnet:2.1-sdk AS build
+FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR ./StatlerWaldorfCorp.LocationService
 
 COPY *.csproj .
@@ -9,7 +9,7 @@ COPY . .
 RUN dotnet publish --output /out/ --configuration Release
 
 # runtime image
-FROM microsoft/dotnet:2.1-aspnetcore-runtime
+FROM mcr.microsoft.com/dotnet/aspnet:3.1
 WORKDIR ./StatlerWaldorfCorp.LocationService
 COPY --from=build /out .
 #EXPOSE 5001
